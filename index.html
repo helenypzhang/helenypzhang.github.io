@@ -42,8 +42,8 @@
           <p style="text-align:center">
           <a href="mailto:ypzhang5-c@my.cityu.edu.hk">Email</a> &nbsp/&nbsp
 		  <a href="data/cv_yupeizhang.pdf">CV</a> &nbsp/&nbsp
-<!--		  <a href="https://scholar.google.com/citations?user=y7oUVucAAAAJ&hl=zh-CN"> Google Scholar </a> &nbsp/&nbsp-->
-<!--          <a href="https://www.linkedin.com/in/xiaomin-ouyang-059556179/"> LinkedIn </a> &nbsp/&nbsp-->
+<!--		  <a href="#"> Google Scholar </a> &nbsp/&nbsp-->
+<!--          <a href="#"> LinkedIn </a> &nbsp/&nbsp-->
 		  <a href="https://github.com/helenypzhang"> Github </a>
           </p>
 	  
@@ -76,6 +76,32 @@
 	<p><heading>Major Publications</heading></p>
 	<ul class="b">
 	<!-- <p><h4>Conference Paper</h4></p> -->
+
+    <tr onmouseout="umd_stop()" onmouseover="umd_start()">
+     <td style="padding:10px;width:25%;vertical-align:middle">
+     <div class="one">
+     <div class="two" id='umd_image'><img src='images/umd.png' width="210"></div>
+     <img src='images/umd.png' width="210">
+     </div>
+     <script type="text/javascript">
+     function umd_start() {
+       document.getElementById('umd_image').style.opacity = "1";
+     }
+
+     function umd_stop() {
+       document.getElementById('umd_image').style.opacity = "0";
+     }
+     umd_stop()
+     </script>
+     </td>
+     <td style="padding:10px;width:75%;vertical-align:middle">
+     <p> <b> (MIA, under review, * equal contribution) </b>Unified Medical Multi-modal Diagnostic Framework with Multi-level Reconstruction Pre-training and Heterogeneity-combat Downstream Tuning. </b></p >
+      <u><b>Yupei Zhang</b></u>*, Li Pan*,(* equal contribution) Qiushi Yang, Tan Li, Zhen Chen. <br>
+     <p> [<b>MedIA</b>] Medical Image Analysis, <b>Under Review</b>. <br>
+<!--     <p>  [<a href="#"> paper</a >]-->
+<!--      [<a href="#"> code</a >]</p>-->
+     </td>
+	</tr>
 
     <tr onmouseout="mrc_stop()" onmouseover="mrc_start()">
      <td style="padding:10px;width:25%;vertical-align:middle">
@@ -175,7 +201,7 @@
 	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
          <p><heading>Selected Awards</heading> </p>
 	     <ul class="b">
-		  <li> National Encouragement Scholarship, <em>2018</em> </li>
+		  <li><b>National Encouragement Scholarship</b>, <em>2018</em> </li>
           <li> Interdisciplinary Contest in Modeling: Honorable Mention, COMAP <em>2018</em> </li>
 		  <li> University-level Outstanding Student Leader, BLCU, <em>2018</em> </li>
 		  <li> Third Prize Scholarship, BLCU, <em>2017</em> </li>
@@ -194,6 +220,7 @@
 		<li> Pytorch Lightning</li>
 		<li> Full-stack web development </li>
 		<li> Motion capture </li>
+        <li> Speech Processing, Phoneme Recognition </li>
 		</ul></p>
             </td>
     </tbody></table>
