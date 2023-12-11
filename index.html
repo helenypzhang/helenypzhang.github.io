@@ -77,6 +77,33 @@
 	<ul class="b">
 	<!-- <p><h4>Conference Paper</h4></p> -->
 
+   <tr onmouseout="lmd_stop()" onmouseover="lmd_start()">
+     <td style="padding:10px;width:25%;vertical-align:middle">
+     <div class="one">
+     <div class="two" id='lmd_image'>
+		 <img src='images/MIA23_Framework.png' width="210"></div>
+     <img src='images/MIA23_Framework.png' width="210">
+     </div>
+     <script type="text/javascript">
+     function lmd_start() {
+       document.getElementById('lmd_image').style.opacity = "1";
+     }
+
+     function lmd_stop() {
+       document.getElementById('lmd_image').style.opacity = "0";
+     }
+     lmd_stop()
+     </script>
+     </td>
+     <td style="padding:10px;width:75%;vertical-align:middle">
+     <p><b> Long-tailed Medical Diagnosis with Relation-aware Representation Learning and Iterative Classifier Calibration </b></p >
+		 <u>Li Pan*</u>, <b>Yupei Zhang*</b>(*co-first author), Qiushi Yang, Tan Li, Zhen Chen. <br>
+     <p> [<b>MIA</b>] Medical Image Analysis, <b>Under Review</b>. <br>
+<!--     <p>  [<a href="#"> paper</a >]-->
+<!--      [<a href="#"> code</a >]</p >-->
+     </td>
+ 	</tr>
+
     <tr onmouseout="umd_stop()" onmouseover="umd_start()">
      <td style="padding:10px;width:25%;vertical-align:middle">
      <div class="one">
