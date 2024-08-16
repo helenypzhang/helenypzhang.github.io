@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f5c9041-7cfb-468c-8829-0dfc60317a23" name="Changes" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/data/BIBM24_FoF.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/BIBM24_framework.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cv_yupeizhang_2024.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/cv_yupeizhang_2024.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -400,7 +399,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723787590598</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1723817928103</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1723817928103</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
