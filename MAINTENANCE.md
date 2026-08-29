@@ -1,21 +1,21 @@
-# 个人主页维护手册
+# Academic Homepage Maintenance Guide
 
-这份手册适用于 Yupei Zhang 的个人主页：<https://helenypzhang.github.io/>。
+This guide explains how to maintain Yupei Zhang's academic homepage: <https://helenypzhang.github.io/>.
 
-项目主要内容位于以下目录：
+Most routine updates only require editing these directories:
 
-- `content/`：英文内容
-- `content_zh/`：中文内容
-- `public/`：论文图片、头像、CV 等公开文件
-- `src/`：页面组件和样式；日常更新通常不需要修改
+- `content/`: English content
+- `content_zh/`: Chinese content
+- `public/`: publication images, profile image, CV, and other public files
+- `src/`: page components and styles; routine content updates normally do not require changes here
 
-除论文列表外，修改英文内容时通常也应同步修改 `content_zh/` 中的对应文件，以免中英文页面内容不一致。论文数据只维护一份 `content/publications.bib`，中英文页面会共用它。
+Except for the publication list, update the corresponding file in `content_zh/` whenever you change English content. This keeps the English and Chinese versions consistent. Publications are maintained only once in `content/publications.bib` and shared by both languages.
 
-## 1. 添加 News
+## 1. Add a News Item
 
-英文新闻在 `content/news.toml`，中文新闻在 `content_zh/news.toml`。
+English news is stored in `content/news.toml`. Chinese news is stored in `content_zh/news.toml`.
 
-把最新消息放在文件最上方：
+Add the newest item at the top of each file:
 
 ```toml
 [[news]]
@@ -23,7 +23,7 @@ date = "2026-09"
 content = "Our paper was accepted by ..."
 ```
 
-中文文件中添加对应内容：
+Add the matching Chinese item to the Chinese file:
 
 ```toml
 [[news]]
@@ -31,13 +31,15 @@ date = "2026-09"
 content = "我们的论文被……接收。"
 ```
 
-日期建议使用 `YYYY-MM`，例如 `2026-09`。
+Use the `YYYY-MM` date format, for example `2026-09`.
 
-## 2. 添加论文
+The News area has a fixed maximum height. When the list becomes longer, it can be scrolled. Its scrollbar remains hidden until the pointer is over the News list or the list receives keyboard focus.
 
-所有论文都添加到 `content/publications.bib`。把新论文条目放在文件最上方；页面会根据年份和月份自动倒序排列。
+## 2. Add a Publication
 
-### 期刊论文示例
+Add every publication to `content/publications.bib`. Place a new entry near the top of the file. The website automatically sorts publications by year and month in descending order.
+
+### Journal article example
 
 ```bibtex
 @article{zhang2026example,
@@ -54,9 +56,9 @@ content = "我们的论文被……接收。"
 }
 ```
 
-### 会议论文示例
+### Conference paper example
 
-将类型改为 `@inproceedings`，并用 `booktitle` 填写会议名称：
+Use `@inproceedings` and put the conference name in `booktitle`:
 
 ```bibtex
 @inproceedings{zhang2026conference,
@@ -70,9 +72,9 @@ content = "我们的论文被……接收。"
 }
 ```
 
-### 预印本示例
+### Preprint example
 
-使用 `@misc` 或 `@unpublished`：
+Use `@misc` or `@unpublished`:
 
 ```bibtex
 @misc{zhang2026preprint,
@@ -85,61 +87,61 @@ content = "我们的论文被……接收。"
 }
 ```
 
-### 论文特殊字段说明
+### Custom publication fields
 
-- `selected = {true}`：在主页的 Selected Publications 中展示。删除该行或改为 `false`，则只在 Publications 页面展示。
-- `preview = {图片文件名}`：论文预览图，图片必须放到 `public/papers/`。
-- `url`：Paper 按钮链接。没有普通链接时也可以只填写 `doi`，网站会自动生成 DOI 链接。
-- `code`：Code 按钮链接；没有代码时删除该行。
-- `journal`：期刊名称。
-- `booktitle`：会议名称。
-- `month`：建议写成 `jan`、`feb`、`mar` 等英文缩写，用于同一年内排序。
-- `description`：简短论文介绍，可选。
-- 每条论文开头的标识符，例如 `zhang2026example`，必须唯一，不能和其他论文重复。
+- `selected = {true}`: shows the paper in Selected Publications on the homepage. Remove this line or set it to `false` to show the paper only on the Publications page.
+- `preview = {image-filename}`: sets the preview image. The image must be stored in `public/papers/`.
+- `url`: sets the Paper button link. If `url` is omitted but `doi` is provided, the website generates a DOI link automatically.
+- `code`: sets the Code button link. Remove this field when code is unavailable.
+- `journal`: journal name.
+- `booktitle`: conference name.
+- `month`: use an English abbreviation such as `jan`, `feb`, or `mar`. This controls sorting within the same year.
+- `description`: optional short description.
+- The identifier at the beginning of each entry, such as `zhang2026example`, must be unique.
 
-### 作者标记
+### Author markers
 
-- 作者姓名后加 `#` 表示共同第一作者，网页显示为 `*`。
-- 作者姓名后加 `*` 表示通讯作者，网页显示为 `†`。
-- 如果没有手动添加通讯作者标记，系统默认最后一位作者为通讯作者。
-- 作者之间必须使用 `and` 分隔。
-- `Yupei Zhang` 会自动高亮。
+- Add `#` after a name to mark a co-first author. The website displays it as `*`.
+- Add `*` after a name to mark a corresponding author. The website displays it as `†`.
+- If no corresponding-author marker is provided, the final author is treated as the corresponding author.
+- Separate authors with `and`.
+- `Yupei Zhang` is highlighted automatically.
 
-例如：
+Example:
 
 ```bibtex
 author = {Yupei Zhang# and First Coauthor# and Senior Author*}
 ```
 
-## 3. 添加或更换论文图片
+## 3. Add or Replace a Publication Image
 
-将图片复制到：
+Copy the image into:
 
 ```text
 public/papers/
 ```
 
-然后在论文条目中填写完全一致的文件名：
+Use the exact same filename in the publication entry:
 
 ```bibtex
 preview = {my-paper-figure.png}
 ```
 
-建议：
+Recommendations:
 
-- 使用 PNG、JPG 或 WebP。
-- 推荐接近 `16:10` 的横向图片；其他比例也可以，页面会完整显示而不会裁切。
-- 文件名尽量只使用英文小写字母、数字和连字符，例如 `tmi-2026-framework.png`。
-- 替换已有图片时，保留原文件名最方便；浏览器可能有缓存，发布后可稍等或强制刷新。
+- Use PNG, JPG, or WebP.
+- A landscape image close to `16:10` works best. Other aspect ratios are supported and displayed without cropping.
+- Use lowercase letters, numbers, and hyphens in filenames, for example `tmi-2026-framework.png`.
+- When replacing an existing image, keeping the old filename avoids another content edit. Browser caching may require a short wait or a forced refresh after deployment.
 
-## 4. 修改个人介绍与研究兴趣
+## 4. Update the Biography and Research Interests
 
-- 英文个人介绍：`content/bio.md`
-- 中文个人介绍：`content_zh/bio.md`
-- 英文研究兴趣：`content/about.toml` 中的 `research_interests`
-- 中文研究兴趣：`content_zh/about.toml` 中的 `research_interests`
+- English biography: `content/bio.md`
+- Chinese biography: `content_zh/bio.md`
+- English research interests: `research_interests` in `content/about.toml`
+- Chinese research interests: `research_interests` in `content_zh/about.toml`
 
-研究兴趣示例：
+Example:
 
 ```toml
 [profile]
@@ -151,25 +153,25 @@ research_interests = [
 ]
 ```
 
-## 5. 修改姓名、职位、联系方式和社交链接
+## 5. Update Name, Position, Contact Details, or Social Links
 
-英文信息在 `content/config.toml`，中文姓名、职位等翻译在 `content_zh/config.toml`。
+Edit the English information in `content/config.toml`. Chinese translations of the name, position, institution, location, and navigation labels are in `content_zh/config.toml`.
 
-常用位置：
+Common sections:
 
-- `[author]`：姓名、职位、学校、头像
-- `[social]`：Email、Google Scholar、GitHub、LinkedIn、地点
-- `[site]`：网站标题、说明和最后更新时间
+- `[author]`: name, position, institution, and profile image
+- `[social]`: email, Google Scholar, GitHub, LinkedIn, and location
+- `[site]`: site title, description, and last-updated date
 
-头像文件目前由 `avatar = "/bio.png"` 指定，对应 `public/bio.png`。
+The current profile image is set by `avatar = "/bio.png"`, which points to `public/bio.png`.
 
-## 6. 修改导航栏
+## 6. Update the Navigation Bar
 
-英文导航在 `content/config.toml` 的 `[[navigation]]`，中文导航在 `content_zh/config.toml`。
+English navigation is defined by the `[[navigation]]` blocks in `content/config.toml`. Chinese navigation is defined in `content_zh/config.toml`.
 
-### 添加外部链接
+### Add an external link
 
-例如添加 Google Scholar：
+For example, to add Google Scholar:
 
 ```toml
 [[navigation]]
@@ -179,23 +181,23 @@ target = "google_scholar"
 href = "https://scholar.google.com/..."
 ```
 
-中文配置中也添加同一项，并把 `title` 翻译成中文。
+Add the same item to the Chinese configuration and translate only `title` if necessary.
 
-### 调整导航顺序
+### Change the navigation order
 
-直接调整各个 `[[navigation]]` 区块在文件中的先后顺序即可。
+Reorder the complete `[[navigation]]` blocks in both configuration files.
 
-### 暂时隐藏导航项
+### Temporarily hide an item
 
-删除或注释掉英文和中文配置中的对应 `[[navigation]]` 区块。内容文件可以保留，以后需要时再把导航配置加回来。Awards 页面目前就是以这种方式保留但不显示。
+Remove or comment out the corresponding `[[navigation]]` block in both language configurations. The page content can remain in the project and the navigation block can be restored later. The Awards page is currently retained but hidden this way.
 
-## 7. 新增普通页面
+## 7. Add a Standard Page
 
-最简单的是新增 Markdown 文本页面。假设要添加 Teaching 页面：
+The simplest new page is a Markdown text page. For example, to add Teaching:
 
-1. 新建 `content/teaching.md`，填写英文正文。
-2. 新建 `content_zh/teaching.md`，填写中文正文。
-3. 新建 `content/teaching.toml`：
+1. Create `content/teaching.md` with the English content.
+2. Create `content_zh/teaching.md` with the Chinese content.
+3. Create `content/teaching.toml`:
 
 ```toml
 type = "text"
@@ -204,7 +206,7 @@ description = "Teaching experience and activities."
 source = "teaching.md"
 ```
 
-4. 新建 `content_zh/teaching.toml`：
+4. Create `content_zh/teaching.toml`:
 
 ```toml
 type = "text"
@@ -213,7 +215,7 @@ description = "教学经历与活动。"
 source = "teaching.md"
 ```
 
-5. 在英文 `content/config.toml` 添加：
+5. Add this block to `content/config.toml`:
 
 ```toml
 [[navigation]]
@@ -223,52 +225,52 @@ target = "teaching"
 href = "/teaching"
 ```
 
-6. 在中文 `content_zh/config.toml` 添加相同配置，并翻译 `title`。`target` 和 `href` 不要翻译。
+6. Add the same block to `content_zh/config.toml` and translate `title`. Do not translate `target` or `href`.
 
-发布后页面地址会是 `/teaching/`。
+After deployment, the page will be available at `/teaching/`.
 
-## 8. 更新 Services
+## 8. Update Academic Services
 
-- 英文页面：`content/services.md`
-- 中文页面：`content_zh/services.md`
-- 页面标题和说明：对应目录中的 `services.toml`
+- English page: `content/services.md`
+- Chinese page: `content_zh/services.md`
+- Page title and description: `services.toml` in each corresponding directory
 
-按照现有 Markdown 格式增加 Conference Reviewer 或 Journal Reviewer 条目即可。
+Follow the existing Markdown format to add Conference Reviewer or Journal Reviewer entries.
 
-## 9. 更新 CV
+## 9. Update the CV
 
-当前 CV 文件位于：
+The current CV is stored at:
 
 ```text
 public/data/cv_yupeizhang_2025.pdf
 ```
 
-如果想保持现有链接不变，直接用新 PDF 替换这个文件即可。如果更改文件名，还需要同步修改 `content/cv.md` 和 `content_zh/cv.md` 中的链接。
+To keep the public link unchanged, replace that PDF while retaining the same filename. If the filename changes, update the link in both `content/cv.md` and `content_zh/cv.md`.
 
-## 10. 本地预览
+## 10. Preview Locally
 
-在项目目录运行：
+From the project directory, run:
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-然后打开终端显示的本地网址，通常是 <http://localhost:3000/>。
+Open the local address shown in the terminal, usually <http://localhost:3000/>.
 
-检查完成后，在终端按 `Control + C` 停止预览。
+When finished, press `Control + C` in the terminal to stop the preview.
 
-正式提交前建议运行：
+Before publishing, run:
 
 ```bash
 pnpm build
 ```
 
-如果构建成功，说明静态页面可以正常生成。
+A successful build confirms that the static website can be generated.
 
-## 11. 发布到 GitHub
+## 11. Publish to GitHub
 
-网站会在 `main` 分支更新后自动发布。常用命令：
+The website is deployed automatically whenever the `main` branch is updated. A typical content-only update uses:
 
 ```bash
 git status
@@ -277,18 +279,18 @@ git commit -m "Update publications and news"
 git push origin main
 ```
 
-如果还修改了其他文件，也要把它们加入 `git add`，或者确认内容无误后使用 `git add -A`。
+If other files were changed, add them explicitly or use `git add -A` after verifying that every change should be published.
 
-推送后可在 GitHub 仓库的 Actions 页面查看发布进度。通常稍等片刻，再访问 <https://helenypzhang.github.io/> 并刷新即可看到更新。
+After pushing, check the Actions page in the GitHub repository. Once the deployment finishes, refresh <https://helenypzhang.github.io/>. Deployment and browser caching can take a short time.
 
-## 12. 发布前检查清单
+## 12. Pre-publication Checklist
 
-- 英文和中文内容是否都已更新。
-- 新论文的年份、月份、期刊或会议名称是否正确。
-- `selected` 是否符合是否展示在主页的预期。
-- Paper、Code 和 DOI 链接是否正确。
-- 论文图片是否放在 `public/papers/`，文件名是否与 BibTeX 一致。
-- 共同第一作者 `#` 与通讯作者 `*` 是否标记正确。
-- 导航栏英文版和中文版是否一致。
-- `pnpm build` 是否成功。
-- `git status` 中是否只有本次希望发布的修改。
+- Update both English and Chinese content where applicable.
+- Check the year, month, journal, or conference name for every new publication.
+- Confirm whether `selected` matches the intended homepage visibility.
+- Test Paper, Code, and DOI links.
+- Confirm that each preview image is in `public/papers/` and that its filename matches the BibTeX entry.
+- Check co-first author `#` and corresponding author `*` markers.
+- Keep English and Chinese navigation configurations consistent.
+- Confirm that `pnpm build` succeeds.
+- Use `git status` to verify that only intended changes will be published.
