@@ -1,6 +1,6 @@
 ## 会议审稿人
 
-- Neural Information Processing Systems (NeurIPS'25)
+- Neural Information Processing Systems (NeurIPS'26)
 
 ## 期刊审稿人
 

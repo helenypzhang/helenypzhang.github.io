@@ -1,6 +1,6 @@
 ## Conference Reviewer
 
-- Neural Information Processing Systems (NeurIPS'25)
+- Neural Information Processing Systems (NeurIPS'26)
 
 ## Journal Reviewer
 
