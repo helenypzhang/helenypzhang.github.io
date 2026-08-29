@@ -1,4 +1,4 @@
 type = "publication"
 title = "Publications"
-description = "Peer-reviewed journal articles, conference papers, and preprints. Co-first authors are underlined."
+description = "Peer-reviewed journal articles, conference papers, and preprints. Co-first authors are marked with an asterisk (*)."
 source = "publications.bib"
