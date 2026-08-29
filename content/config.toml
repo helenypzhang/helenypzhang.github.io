@@ -54,12 +54,6 @@ target = "services"
 href = "/services"
 
 [[navigation]]
-title = "Awards"
-type = "page"
-target = "awards"
-href = "/awards"
-
-[[navigation]]
 title = "CV"
 type = "page"
 target = "cv"

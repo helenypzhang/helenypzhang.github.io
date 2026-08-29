@@ -31,12 +31,6 @@ target = "services"
 href = "/services"
 
 [[navigation]]
-title = "荣誉奖项"
-type = "page"
-target = "awards"
-href = "/awards"
-
-[[navigation]]
 title = "简历"
 type = "page"
 target = "cv"
