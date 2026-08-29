@@ -6,7 +6,7 @@ last_updated = "August 29, 2026"
 
 [author]
 name = "Yupei Zhang"
-title = "Second-year PhD Candidate"
+title = "PhD Candidate"
 institution = "University of Cambridge"
 avatar = "/bio.png"
 
@@ -16,6 +16,7 @@ location = "Cambridge, United Kingdom"
 location_url = "https://maps.google.com/?q=University+of+Cambridge"
 google_scholar = "https://scholar.google.com/citations?user=oGWNMbsAAAAJ&hl=en"
 github = "https://github.com/helenypzhang"
+linkedin = "https://www.linkedin.com/in/yupei-zhang-40861a149/"
 
 [features]
 enable_likes = false
@@ -45,6 +46,12 @@ title = "Publications"
 type = "page"
 target = "publications"
 href = "/publications"
+
+[[navigation]]
+title = "Services"
+type = "page"
+target = "services"
+href = "/services"
 
 [[navigation]]
 title = "Awards"

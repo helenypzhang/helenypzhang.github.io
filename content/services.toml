@@ -1,0 +1,4 @@
+type = "text"
+title = "Academic Services"
+description = "Conference and journal reviewing service."
+source = "services.md"

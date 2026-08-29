@@ -5,7 +5,7 @@ last_updated = "2026年8月29日"
 
 [author]
 name = "张宇培"
-title = "博士二年级研究生"
+title = "博士研究生"
 institution = "剑桥大学"
 
 [social]
@@ -23,6 +23,12 @@ title = "论文"
 type = "page"
 target = "publications"
 href = "/publications"
+
+[[navigation]]
+title = "学术服务"
+type = "page"
+target = "services"
+href = "/services"
 
 [[navigation]]
 title = "荣誉奖项"

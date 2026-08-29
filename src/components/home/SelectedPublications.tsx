@@ -59,9 +59,12 @@ export default function SelectedPublications({ publications, title, enableOnePag
                         <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-1">
                             {pub.authors.map((author, idx) => (
                                 <span key={idx}>
-                                    <span className={`${author.isHighlighted ? 'font-semibold text-accent' : ''} ${author.isCoAuthor ? `underline underline-offset-4 ${author.isHighlighted ? 'decoration-accent' : 'decoration-neutral-400'}` : ''}`}>
-                                        {author.name}
-                                    </span>
+                                <span className={`${author.isHighlighted ? 'font-semibold text-accent' : ''}`}>
+                                    {author.name}
+                                </span>
+                                {author.isCoAuthor && (
+                                    <sup className={`ml-0.5 ${author.isHighlighted ? 'text-accent' : 'text-neutral-600 dark:text-neutral-500'}`}>*</sup>
+                                )}
                                     {author.isCorresponding && (
                                         <sup className={`ml-0 ${author.isHighlighted ? 'text-accent' : 'text-neutral-600 dark:text-neutral-500'}`}>†</sup>
                                     )}
@@ -70,13 +73,30 @@ export default function SelectedPublications({ publications, title, enableOnePag
                             ))}
                         </p>
                         <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-2">
-                            {pub.journal || pub.conference}
+                            {pub.journal || pub.conference}, {pub.year}
                         </p>
-                        {pub.description && (
-                            <p className="text-sm text-neutral-500 dark:text-neutral-500 line-clamp-2">
-                                {pub.description}
-                            </p>
-                        )}
+                        <div className="flex flex-wrap gap-3 text-sm font-medium">
+                            {(pub.url || pub.doi) && (
+                                <a
+                                    href={pub.url || `https://doi.org/${pub.doi}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-accent hover:text-accent-dark transition-colors"
+                                >
+                                    {messages.publications.paper}
+                                </a>
+                            )}
+                            {pub.code && (
+                                <a
+                                    href={pub.code}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-accent hover:text-accent-dark transition-colors"
+                                >
+                                    {messages.publications.code}
+                                </a>
+                            )}
+                        </div>
                     </motion.div>
                 ))}
                         </div>

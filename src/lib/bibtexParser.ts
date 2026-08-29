@@ -190,7 +190,7 @@ function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ nam
   const highlightNormalizedList = Array.from(highlightNormalizedCandidates);
 
   // Split by "and" and clean up
-  return authorsStr
+  const authors = authorsStr
     .split(/\sand\s/)
     .map(author => {
       // Clean up the author name
@@ -228,6 +228,12 @@ function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ nam
       };
     })
     .filter(author => author.name);
+
+  if (authors.length > 0 && !authors.some(author => author.isCorresponding)) {
+    authors[authors.length - 1].isCorresponding = true;
+  }
+
+  return authors;
 }
 
 function cleanBibTeXString(str?: string): string {
