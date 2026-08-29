@@ -1,0 +1,40 @@
+type = "card"
+title = "Awards & Patent"
+description = "Selected honors, awards, and intellectual property."
+
+[[items]]
+title = "Interactive Elderly Assistance System"
+subtitle = "Patent · Co-inventor"
+date = "2022"
+content = "Named as one of the inventors."
+
+[[items]]
+title = "Best Presentation Award"
+subtitle = "ICCPR"
+date = "2022"
+content = "Awarded for Research on Phoneme Recognition using Attention-based Methods."
+link = "/data/ICCPR2022_BestPresentationE0080.pdf"
+
+[[items]]
+title = "National Encouragement Scholarship"
+date = "2018"
+
+[[items]]
+title = "Interdisciplinary Contest in Modeling — Honorable Mention"
+subtitle = "COMAP"
+date = "2018"
+
+[[items]]
+title = "University-level Outstanding Student Leader"
+subtitle = "Beijing Language and Culture University"
+date = "2018"
+
+[[items]]
+title = "Third Prize Scholarship"
+subtitle = "Beijing Language and Culture University"
+date = "2017"
+
+[[items]]
+title = "Individual Scholarship"
+subtitle = "Beijing Language and Culture University"
+date = "2016"

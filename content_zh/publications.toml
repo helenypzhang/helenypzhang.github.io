@@ -1,0 +1,4 @@
+type = "publication"
+title = "论文"
+description = "已发表的期刊论文、会议论文与预印本。共同第一作者以下划线标注。"
+source = "publications.bib"

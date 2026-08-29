@@ -1,0 +1,59 @@
+[site]
+title = "Yupei Zhang"
+description = "Academic homepage of Yupei Zhang, a PhD candidate at the University of Cambridge working on medical image analysis and multimodal AI."
+favicon = "/favicon.png"
+last_updated = "August 29, 2026"
+
+[author]
+name = "Yupei Zhang"
+title = "Second-year PhD Candidate"
+institution = "University of Cambridge"
+avatar = "/bio.png"
+
+[social]
+email = "yz931@cam.ac.uk"
+location = "Cambridge, United Kingdom"
+location_url = "https://maps.google.com/?q=University+of+Cambridge"
+google_scholar = "https://scholar.google.com/citations?user=oGWNMbsAAAAJ&hl=en"
+github = "https://github.com/helenypzhang"
+
+[features]
+enable_likes = false
+enable_one_page_mode = false
+
+[i18n]
+enabled = true
+locales = ["en", "zh"]
+default_locale = "en"
+mode = "auto"
+fixed_locale = "en"
+persist = true
+switcher = true
+
+[i18n.labels]
+en = "English"
+zh = "中文"
+
+[[navigation]]
+title = "About"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "Publications"
+type = "page"
+target = "publications"
+href = "/publications"
+
+[[navigation]]
+title = "Awards"
+type = "page"
+target = "awards"
+href = "/awards"
+
+[[navigation]]
+title = "CV"
+type = "page"
+target = "cv"
+href = "/cv"

@@ -1,0 +1,29 @@
+type = "about"
+title = "关于我"
+
+[profile]
+research_interests = [
+  "医学图像分析",
+  "多模态分析",
+  "计算病理学",
+  "转化人工智能"
+]
+
+[[sections]]
+id = "about"
+type = "markdown"
+source = "bio.md"
+title = "关于我"
+
+[[sections]]
+id = "news"
+type = "list"
+title = "动态"
+source = "news.toml"
+
+[[sections]]
+id = "featured_publications"
+type = "publications"
+title = "精选论文"
+filter = "selected"
+limit = 10

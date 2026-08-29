@@ -1,0 +1,37 @@
+[site]
+title = "张宇培"
+description = "剑桥大学博士研究生张宇培的个人学术主页，研究方向包括医学图像分析与多模态人工智能。"
+last_updated = "2026年8月29日"
+
+[author]
+name = "张宇培"
+title = "博士二年级研究生"
+institution = "剑桥大学"
+
+[social]
+location = "英国剑桥"
+location_url = "https://maps.google.com/?q=University+of+Cambridge"
+
+[[navigation]]
+title = "关于我"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "论文"
+type = "page"
+target = "publications"
+href = "/publications"
+
+[[navigation]]
+title = "荣誉奖项"
+type = "page"
+target = "awards"
+href = "/awards"
+
+[[navigation]]
+title = "简历"
+type = "page"
+target = "cv"
+href = "/cv"

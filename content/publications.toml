@@ -1,0 +1,4 @@
+type = "publication"
+title = "Publications"
+description = "Peer-reviewed journal articles, conference papers, and preprints. Co-first authors are underlined."
+source = "publications.bib"

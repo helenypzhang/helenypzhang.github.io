@@ -1,0 +1,40 @@
+type = "card"
+title = "荣誉奖项与专利"
+description = "部分荣誉、奖项与知识产权。"
+
+[[items]]
+title = "交互式老年人辅助系统"
+subtitle = "专利 · 共同发明人"
+date = "2022"
+content = "发明人之一。"
+
+[[items]]
+title = "最佳报告奖"
+subtitle = "ICCPR"
+date = "2022"
+content = "获奖论文：Research on Phoneme Recognition using Attention-based Methods。"
+link = "/data/ICCPR2022_BestPresentationE0080.pdf"
+
+[[items]]
+title = "国家励志奖学金"
+date = "2018"
+
+[[items]]
+title = "美国大学生数学建模竞赛荣誉奖"
+subtitle = "COMAP"
+date = "2018"
+
+[[items]]
+title = "校级优秀学生干部"
+subtitle = "北京语言大学"
+date = "2018"
+
+[[items]]
+title = "三等奖学金"
+subtitle = "北京语言大学"
+date = "2017"
+
+[[items]]
+title = "单项奖学金"
+subtitle = "北京语言大学"
+date = "2016"
