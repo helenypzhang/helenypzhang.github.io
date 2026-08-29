@@ -75,13 +75,13 @@ export default function SelectedPublications({ publications, title, enableOnePag
                         <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-2">
                             {pub.journal || pub.conference}, {pub.year}
                         </p>
-                        <div className="flex flex-wrap gap-3 text-sm font-medium">
+                        <div className="flex flex-wrap gap-2 mt-3">
                             {(pub.url || pub.doi) && (
                                 <a
                                     href={pub.url || `https://doi.org/${pub.doi}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-accent hover:text-accent-dark transition-colors"
+                                    className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
                                 >
                                     {messages.publications.paper}
                                 </a>
@@ -91,7 +91,7 @@ export default function SelectedPublications({ publications, title, enableOnePag
                                     href={pub.code}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-accent hover:text-accent-dark transition-colors"
+                                    className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
                                 >
                                     {messages.publications.code}
                                 </a>
