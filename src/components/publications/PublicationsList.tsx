@@ -214,13 +214,13 @@ export default function PublicationsList({ config, publications, embedded = fals
                         >
                             <div className="flex flex-col md:flex-row gap-6">
                                 {pub.preview && (
-                                    <div className="w-full md:w-48 flex-shrink-0">
+                                    <div className="w-full md:w-56 flex-shrink-0">
                                         <div className="aspect-[16/10] relative rounded-lg overflow-hidden bg-white dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700">
                                             <Image
                                                 src={`/papers/${pub.preview}`}
                                                 alt={pub.title}
                                                 fill
-                                                className="object-contain p-2"
+                                                className="object-contain p-0.5"
                                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                             />
                                         </div>
