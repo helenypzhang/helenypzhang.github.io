@@ -2,4 +2,4 @@ I am a second-year PhD candidate in the [Department of Clinical Neurosciences](h
 
 Before joining Cambridge, I was a full-time research assistant in the Department of Pathology, School of Clinical Medicine, at the University of Hong Kong, supervised by [Prof. Maximus Yeung](https://www.patho.hku.hk/en/Our-Team/Academic/Assistant-Professors/Prof-YEUNG-Chun-Fai-Maximus-Item/Prof-YEUNG-Chun-Fai-Maximus). I also work closely with [Prof. Zhen Chen](https://franciszchen.github.io/) on medical image analysis.
 
-My research focuses on medical image analysis, multimodal analysis, computational pathology, and translational AI. I received my MSc in Multimedia Information Technology from City University of Hong Kong and my B.E. in Digital Media Technology from Beijing Language and Culture University.
+My research focuses on multimodal learning in medicine, computational pathology, and medical image analysis, with the goal of advancing translational AI. I received my MSc in Multimedia Information Technology from City University of Hong Kong and my B.E. in Digital Media Technology from Beijing Language and Culture University.
