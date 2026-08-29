@@ -21,3 +21,5 @@ pnpm dev
 Run `pnpm build` to create the static site in `out/`. Pushes to `main` are deployed automatically through GitHub Actions.
 
 The current public CV is the 2025 version and can be replaced at `public/data/cv_yupeizhang_2025.pdf` when the updated CV is ready.
+
+For step-by-step instructions on updating news, publications, images, navigation, pages, and deployment, see [MAINTENANCE.md](MAINTENANCE.md).
