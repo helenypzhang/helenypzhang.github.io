@@ -1,12 +1,12 @@
 [site]
 title = "Yupei Zhang"
-description = "Academic homepage of Yupei Zhang, a third-year PhD candidate at the University of Cambridge working on medical image analysis and multimodal AI."
+description = "Academic homepage of Yupei Zhang, a PhD candidate at the University of Cambridge working on medical image analysis and multimodal AI."
 favicon = "/favicon.png"
 last_updated = "August 29, 2026"
 
 [author]
 name = "Yupei Zhang"
-title = "Third-year PhD Candidate"
+title = "PhD Candidate"
 institution = "University of Cambridge"
 avatar = "/bio.png"
 
