@@ -242,7 +242,7 @@ Follow the existing Markdown format to add Conference Reviewer or Journal Review
 The current CV is stored at:
 
 ```text
-public/data/cv_yupeizhang_2025.pdf
+public/data/cv_yupeizhang_2026.pdf
 ```
 
 To keep the public link unchanged, replace that PDF while retaining the same filename. If the filename changes, update the link in both `content/cv.md` and `content_zh/cv.md`.

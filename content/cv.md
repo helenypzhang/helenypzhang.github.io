@@ -1,5 +1,5 @@
 ## Curriculum Vitae
 
-[Download my CV (PDF)](/data/cv_yupeizhang_2025.pdf)
+[Download my CV (PDF)](/data/cv_yupeizhang_2026.pdf)
 
-The currently published version was updated in 2025.
+The currently published version was updated in 2026.
